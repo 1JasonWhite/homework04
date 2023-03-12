@@ -6,6 +6,7 @@
 
 int[] array = { 1, 2, 5, 7, 19, 6, 1, 33 };
 
+
 void PrintArray(int[] arr)
 {
     Console.Write("[");
@@ -13,10 +14,12 @@ void PrintArray(int[] arr)
     int count = arr.Length;
     for (int i = 0; i < count; i++)
     {
-        Console.Write($"{arr[i]} ");
+        if(i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}");
     }
     Console.Write("]");
 }
+
 PrintArray(array);
 
 // не знаю как сделать запятые после каждой цифры в массиве при выводе в консоль
